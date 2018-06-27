@@ -1,0 +1,14 @@
+{
+  "name": "exploratory-testing",
+  "version": "1.0.0",
+  "description": "ERC20 exploratory Web test",
+  "main": "index.js",
+  "scripts": {
+    "build": "solc ../contracts/HelloWorld.sol -o ./ --abi --overwrite && echo \"abi = $(cat ./HelloWorld.abi)\" > ./HelloWorld.abi"
+  },
+  "author": "Swisscom Blockchain AG",
+  "license": "MIT",
+  "dependencies": {
+    "web3": "github:ethereum/web3.js"
+  }
+}
