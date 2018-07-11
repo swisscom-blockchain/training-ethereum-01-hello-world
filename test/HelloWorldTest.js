@@ -57,7 +57,7 @@ contract('HelloWorld Contract Tests', async (accounts) => {
         //assert.equal(result.logs[0].event, "???");
 
         value = await instance.getNumberValue();
-        assert.equal(text, 100);
+        assert.equal(value, 100);
     })
 
     //TODO: add more tests
