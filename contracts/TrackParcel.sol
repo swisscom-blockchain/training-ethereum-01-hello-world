@@ -9,6 +9,10 @@ contract TrackParcel {
 
     mapping(uint256 => Record[]) public records;
 
+    constructor() public {
+        //nothing todo
+    }
+
     //TODO: define event: "event RecordEvent(<your code here>);"
 
     function readRecord(uint256 _parcelId, uint256 _recordNumber) public view returns(string position, uint16 temperature) {

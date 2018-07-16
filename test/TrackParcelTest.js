@@ -2,7 +2,7 @@
 const TrackParcel = artifacts.require('TrackParcel')
 
 
-contract('TrackParcel Contract Tests', async (accounts) => {
+contract('TrackParcel ---', async (accounts) => {
 
     it("write and read record", async () => {
         let instance = await TrackParcel.new();
