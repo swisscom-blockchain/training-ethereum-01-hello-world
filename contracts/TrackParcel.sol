@@ -15,7 +15,8 @@ contract TrackParcel {
 
     //TODO: define event: "event RecordEvent(<your code here>);"
 
-    function readRecord(uint256 _parcelId, uint256 _recordNumber) public view returns(string position, uint16 temperature) {
+    function readRecord(uint256 _parcelId, uint256 _recordNumber) public view 
+            returns(string position, uint16 temperature) {
         
         position = records[_parcelId][_recordNumber].position;
         temperature = records[_parcelId][_recordNumber].temperature;
