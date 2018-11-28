@@ -4,7 +4,10 @@
 - Different data structures
 - Truffle Tests
 
-Please visit the Solidity documentation: [https://solidity.readthedocs.io/en/v0.4.25/](https://solidity.readthedocs.io/en/v0.4.25/)
+Helpful links:
+
+- [Official Solidity Doc](https://solidity.readthedocs.io/en/v0.4.25/)
+- [Cheatsheet](https://github.com/manojpramesh/solidity-cheatsheet)
 
 ## Run tests
 
