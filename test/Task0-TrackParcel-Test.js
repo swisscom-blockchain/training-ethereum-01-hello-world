@@ -9,10 +9,10 @@ contract('TrackParcel', async (accounts) => {
 
         await instance.writeRecord(2001, "Hamburg", 23);
         await instance.writeRecord(2001, "Zürich", 27);
-        
+
         let result = await instance.readRecordSize(2001);
         assert.equal(result, 2);
-        
+
         result = await instance.readRecord(2001, 0);
         assert.equal(result[0], "Hamburg");
         assert.equal(result[1], 23);
@@ -27,10 +27,10 @@ contract('TrackParcel', async (accounts) => {
 
         await instance.writeRecord(2001, "Hamburg", 23);
         await instance.writeRecord(4000, "Zürich", 27);
-        
+
         let result = await instance.readRecordSize(2001);
         assert.equal(result, 1);
-        
+
         result = await instance.readRecord(2001, 0);
         assert.equal(result[0], "Hamburg");
         assert.equal(result[1], 23);

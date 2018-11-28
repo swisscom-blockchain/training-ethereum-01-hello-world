@@ -1,4 +1,3 @@
-//based on https://github.com/ConsenSys/Tokens/tree/master/test
 const TrackParcel = artifacts.require('TrackParcel')
 
 
@@ -9,6 +8,8 @@ contract('Task 1 - Event', async (accounts) => {
 
         let result = await instance.writeRecord(2001, "Hamburg", 23);
 
+        //console.dir(result.logs[0]) 
+        //console.dir(result.logs[0].args) 
         assert.equal(result.logs[0].event, "RecordEvent");
         assert.equal(result.logs[0].args.parcelId, 2001);
         assert.equal(result.logs[0].args.position, "Hamburg");
