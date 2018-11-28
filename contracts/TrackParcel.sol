@@ -1,4 +1,4 @@
-pragma solidity ^0.4.23;
+pragma solidity ^0.4.24;
 
 contract TrackParcel {
 
@@ -10,10 +10,8 @@ contract TrackParcel {
     mapping(uint256 => Record[]) public records;
 
     constructor() public {
-        //nothing todo
-    }
 
-    //TODO: define event: "event RecordEvent(<your code here>);"
+    }
 
     function readRecord(uint256 _parcelId, uint256 _recordNumber) public view 
             returns(string position, uint16 temperature) {
@@ -29,15 +27,12 @@ contract TrackParcel {
 
     function writeRecord(uint256 _parcelId, string _position, uint16 _temperature) public returns(bool) {
 
-        //TODO: Check Ownership here
-
         records[_parcelId].push(
             Record({
                 position: _position,
                 temperature: _temperature     
             }));
 
-        //TODO: emit event here
         return true;
     }
 

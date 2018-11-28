@@ -8,10 +8,16 @@ Please visit the Solidity documentation: [https://solidity.readthedocs.io/en/v0.
 
 ## Run tests
 
-- Start ganache or testrpc on port 8545 (you need at least two unlocked accounts)
+Several Tests will fail.
 
 ```bash
+ganache-cli
+
+# new terminal
 truffle test
+
+# This test class should work
+truffle test test/Task0-TrackParcel-Test.js
 ```
 
 ## Task 0
@@ -57,11 +63,11 @@ truffle test test/Task3-Ownership-Test.js
 
 ## Task 4
 
-Goal: Whenever somebody wants to write a record, the sender has to pay a fee of 0.001 Ether. The fee should be directly be sent to the address: `0xa38d3a2dc70a0c4e713612901ac90ae81f254ab5`.
+Goal: Whenever somebody wants to write a record, the sender has to pay a fee of 0.001 Ether. The fee should directly be sent to the address: `0xa38d3a2dc70a0c4e713612901ac90ae81f254ab5`.
 
 Tasks:
 
-- Records are only written in the smart contract if 0.001 Ether is added or more
+- Records are only written in the smart contract if 0.001 Ether is added or more.
 - If too much Ether was sent the rest will be rewarded to the sender.
 - Create a test file to test the function. Write at least three test methods (not enough Ether, Exact amount of Ether, too much Ether).
 
