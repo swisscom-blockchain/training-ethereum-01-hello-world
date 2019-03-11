@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.5.0;
 
 contract TrackParcel {
 
@@ -14,7 +14,7 @@ contract TrackParcel {
     }
 
     function readRecord(uint256 _parcelId, uint256 _recordNumber) public view 
-            returns(string position, uint16 temperature) {
+            returns(string memory position, uint16 temperature) {
         
         position = records[_parcelId][_recordNumber].position;
         temperature = records[_parcelId][_recordNumber].temperature;
@@ -25,7 +25,7 @@ contract TrackParcel {
         return records[_parcelId].length;
     }
 
-    function writeRecord(uint256 _parcelId, string _position, uint16 _temperature) public returns(bool) {
+    function writeRecord(uint256 _parcelId, string memory _position, uint16 _temperature) public returns(bool) {
 
         records[_parcelId].push(
             Record({

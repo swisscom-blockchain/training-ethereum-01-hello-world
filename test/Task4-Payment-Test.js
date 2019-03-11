@@ -6,13 +6,13 @@ contract('Task 4 - Payment', async (accounts) => {
     it("Send 0.001 Ether", async () => {
         let instance = await TrackParcel.new();
 
-        var balanceBefore = web3.eth.getBalance("0xA38D3A2dc70a0c4e713612901AC90AE81f254Ab5");
+        var balanceBefore = await web3.eth.getBalance("0xA38D3A2dc70a0c4e713612901AC90AE81f254Ab5");
         await instance.writeRecord(2001, "Hamburg", 23, 10, {
             from: accounts[0],
             value: 1000000000000000
         });
 
-        var balanceAfter = web3.eth.getBalance("0xA38D3A2dc70a0c4e713612901AC90AE81f254Ab5");
+        var balanceAfter = await web3.eth.getBalance("0xA38D3A2dc70a0c4e713612901AC90AE81f254Ab5");
         var diff = balanceAfter - balanceBefore;
         assert.equal(diff, 1000000000000000);
     })
@@ -31,7 +31,7 @@ contract('Task 4 - Payment', async (accounts) => {
 
         let instance = await TrackParcel.new();
 
-        var balanceBefore = web3.eth.getBalance(accounts[0]);
+        var balanceBefore = await web3.eth.getBalance(accounts[0]);
         var txReceipt = await instance.writeRecord(2001, "Hamburg", 23, 10, {
             from: accounts[0],
             value: 2000000000000000,
